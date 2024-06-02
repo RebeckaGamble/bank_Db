@@ -7,7 +7,7 @@ const HERO = hero;
 
 export default function Hero() {
   return (
-    <div className=" h-auto bg-blue-100 dark:bg-[#121212]">
+    <div className="h-auto bg-blue-100 dark:bg-[#121212]">
       <div className="max-w-[90rem] w-full mx-auto flex flex-col md:flex-row">
         {/*small bp, image over text */}
         <div className="md:hidden w-full flex justify-center ">
@@ -22,7 +22,7 @@ export default function Hero() {
           </div>
         </div>
         {/* Text */}
-        <div className="flex flex-col justify-between w-full md:w-[50%] py-6 lg:py-10 xl:px-0 px-4 md:pr-10">
+        <div className="flex flex-col justify-between w-full md:w-[50%] py-6 lg:py-10 w-[90rem]:px-0 px-4 md:pr-10">
           <h3 className="font-semibold text-[24px] pb-4">
             Where Your Financial Goals Take Flight
           </h3>
@@ -44,7 +44,7 @@ export default function Hero() {
             <p>Join us at Chas Bank and experience the difference today.</p>
           </div>
           <div>
-            <Link href="/create" className="px-6 py-2 text-white bg-[#005fa5]">
+            <Link href="/create" className="px-6 py-2 hover:font-semibold hover:text-[18px] rounded-[8px] text-white bg-[#005fa5] dark:bg-[#414142]">
               Create account
             </Link>
           </div>

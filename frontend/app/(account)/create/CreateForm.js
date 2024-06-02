@@ -41,12 +41,12 @@ export default function CreateForm() {
   }
 
   return (
-    <div className="px-4 w-full">
-      <div className="pt-10 xl:pt-40 flex flex-col mx-auto">
-        <h3 className="font-semibold pb-6 text-center text-xl">
+    <div className="px-4 w-full pt-10 xl:pt-40 ">
+      <div className="flex bg-[#fff] dark:bg-[#414142] flex-col max-w-[300px] sm:border sm:border-slate-200 h-auto xl:max-w-[500px] mx-auto shadow-lg px-4 py-6 md:px-8 md:py-10">
+        <h3 className="font-semibold pb-6 text-center text-xl xl:text-2xl md:pb-10">
           Create new user account
         </h3>
-        <form onSubmit={handleCreateUser} className="flex flex-col mx-auto">
+        <form onSubmit={handleCreateUser} className="flex flex-col flex-1 mx-auto w-full max-w-[360px]">
           <label htmlFor="username" className="font-semibold">
             Username:
           </label>
@@ -54,7 +54,7 @@ export default function CreateForm() {
             id="username"
             ref={usernameRef}
             type="text"
-            className="max-w-[300px] border bordre-slate-300 px-2 py-1 mb-2"
+            className="border bordre-slate-500 px-2 py-1 mb-2 dark:bg-[#121212]"
           />
 
           <label htmlFor="password" className="font-semibold">
@@ -64,12 +64,12 @@ export default function CreateForm() {
             id="password"
             ref={passwordRef}
             type="password"
-            className="max-w-[300px] border bordre-slate-300 px-2 py-1"
+            className="border bordre-slate-500 px-2 py-1 dark:bg-[#121212]"
           />
-          <div className="max-w-[300px] mt-6 flex justify-end">
+          <div className="mt-6 flex justify-end">
             <button
               type="submit"
-              className="max-w-fit px-6 py-2 bg-[#005fa5] text-white"
+              className="max-w-fit px-6 py-2 bg-[#005fa5] text-white dark:bg-[#121212] hover:font-semibold"
             >
               Create account
             </button>
@@ -80,7 +80,7 @@ export default function CreateForm() {
         <div className="pt-4 text-center">
           <p>
             Already have an account? Go to{" "}
-            <Link href="/login" className="underline text-blue-700">
+            <Link href="/login" className="underline text-blue-700 dark:text-blue-300">
               Login
             </Link>
           </p>

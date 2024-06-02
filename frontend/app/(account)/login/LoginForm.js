@@ -33,16 +33,15 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="px-4 w-full">
-      <div className="pt-10 xl:pt-40 flex flex-col mx-auto">
-        <h3 className="font-semibold pb-6 text-center text-xl">
+    <div className="px-4 w-full pt-10 xl:pt-40 ">
+     <div className="flex bg-[#fff] dark:bg-[#414142] flex-col max-w-[300px] sm:border sm:border-slate-200 h-auto xl:max-w-[500px] mx-auto shadow-lg px-4 py-6 md:px-8 md:py-10">
+        <h3 className="font-semibold pb-6 text-center text-xl xl:text-2xl md:pb-10">
           Login to your user account
         </h3>
         <form
           action=""
           onSubmit={handleLoginUser}
-          className="flex flex-col mx-auto"
-        >
+          className="flex flex-col flex-1 mx-auto w-full max-w-[360px]"        >
           <label htmlFor="username" className="font-semibold">
             Username:{" "}
           </label>
@@ -51,7 +50,7 @@ export default function LoginForm() {
             value={username}
             required
             onChange={(e) => setUsername(e.target.value)}
-            className="max-w-[300px] border bordre-slate-300 px-2 py-1 mb-2"
+            className="border bordre-slate-500 px-2 py-1 mb-2 dark:bg-[#121212]"
           />
           <label htmlFor="password" className="font-semibold">
             Password:{" "}
@@ -61,19 +60,19 @@ export default function LoginForm() {
             value={password}
             required
             onChange={(e) => setPassword(e.target.value)}
-            className="max-w-[300px] border bordre-slate-300 px-2 py-1"
+            className="border bordre-slate-500 px-2 py-1 mb-2 dark:bg-[#121212]"
           />
 
           {error && <p className="text-red-500 text-center">{error}</p>}
-          <div className="max-w-[300px] mt-6 flex justify-end">
-            <button className="max-w-fit px-6 py-2 text-white">Log in</button>
+          <div className="mt-6 flex justify-end">
+            <button className="max-w-fit px-6 py-2 text-white dark:bg-[#121212] hover:font-semibold">Log in</button>
           </div>
         </form>
 
         <div className="pt-4 text-center">
           <p>
             Don't have an account? Go to{" "}
-            <Link href="/create" className="underline text-blue-700">
+            <Link href="/create" className="underline text-blue-700 dark:text-blue-300">
               Create account
             </Link>
           </p>
